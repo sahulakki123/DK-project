@@ -1,5 +1,4 @@
 body {
-  background: linear-gradient(135deg, #92FFC0, #002661);
   font-family: "Poppins", sans-serif;
 }
 
@@ -21,6 +20,7 @@ body {
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
+  background: linear-gradient(135deg, #92FFC0, #002661);
 }
 
 /* Heading */
@@ -101,7 +101,7 @@ body {
 
 
 body {
-  background: linear-gradient(135deg, #92FFC0, #002661);
+  
   font-family: 'Poppins', sans-serif;
 }
 
@@ -120,6 +120,7 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, #92FFC0, #002661);
 }
 
 .modern-form h2 {
