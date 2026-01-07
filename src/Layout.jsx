@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './assets/dklogo.jpeg'
 import "./Tailwind.css"
 import { Link, Outlet } from 'react-router-dom'
+import Foter from './Foter'
 
 const Layout = () => {
 
@@ -27,7 +28,7 @@ const Layout = () => {
         </header>
         <Outlet/>
 
-        <h1>footer</h1>
+        <Foter/>
    </>
   )
 }

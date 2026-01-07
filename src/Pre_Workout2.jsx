@@ -1,7 +1,7 @@
 import React from 'react'
 import './Child.css'
 
-const Child = ({Mydata}) => {
+const Pre_Workout2 = ({Mydata}) => {
   return (
     <>
     {
@@ -13,12 +13,10 @@ const Child = ({Mydata}) => {
                 <h3>{e.name}</h3>
                 <p className="price">{e.price}</p>
             </div>
-      ))}
-
-
-      
+      ))}  
     </>
   )
 }
 
-export default Child
+
+export default Pre_Workout2

@@ -1,8 +1,12 @@
 import React from 'react'
+import Creatines1 from './Creatines1'
+
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <>
+      <Creatines1/>
+    </>
   )
 }
 

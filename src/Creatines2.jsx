@@ -1,7 +1,7 @@
 import React from 'react'
 import './Child.css'
 
-const Child = ({Mydata}) => {
+const Creatines2 = ({Mydata}) => {
   return (
     <>
     {
@@ -21,4 +21,4 @@ const Child = ({Mydata}) => {
   )
 }
 
-export default Child
+export default Creatines2
