@@ -9,6 +9,7 @@ import im4 from './assets/Ln.webp'
 import im5 from './assets/awp.webp'
 import Creatines1 from './Creatines1'
 import Pre_Workout1 from './Pre_Workout1'
+import Peanut1 from './Pages/Peanut1'
 
 const Home = () => {
 
@@ -66,6 +67,7 @@ const Home = () => {
         </div>
         <Creatines1/>
         <Pre_Workout1/>
+        <Peanut1/>
         
     </>
   )
