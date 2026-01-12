@@ -8,6 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: aqua;
+
 }
 
 /* Form card */
@@ -20,7 +22,7 @@ body {
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
-  background: linear-gradient(135deg, #92FFC0, #002661);
+  background: linear-gradient(135deg, #000000);
 }
 
 /* Heading */
@@ -110,6 +112,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+   background-color: aqua;
 }
 
 .modern-form {
@@ -120,7 +123,7 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: linear-gradient(135deg, #92FFC0, #002661);
+  background: linear-gradient(135deg, #050506);
 }
 
 .modern-form h2 {
