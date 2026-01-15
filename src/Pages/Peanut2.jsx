@@ -10,6 +10,10 @@ const Peanut2 = ({ Mydata }) => {
           <h2>{e.mydes}</h2>
           <h3>{e.name}</h3>
           <p className="price">{e.price}</p>
+          <div className="btn-area">
+                  <button className="btn1">{e.add}</button>
+                  <button className="btn2">{e.but}</button>
+              </div>
         </div>
       ))}
     </>

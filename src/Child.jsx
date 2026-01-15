@@ -4,26 +4,27 @@ import { useNavigate } from 'react-router-dom'
 
 const Child = ({Mydata}) => {
 
-  let usenavi = useNavigate()
-  
-  let okk=()=>{
-    usenavi('/products')
-  }
+  const navigate = useNavigate();
+
+  const NextPage = () => {
+    navigate("/order");
+  };
+
   return (
     <>
     {
     Mydata.map((e)=>(
-
-      <div className="card" onClick={okk}>
-                <img src={e.im} alt="product" />
+      <div className="card">
+              <img src={e.im} alt="product" />
                 <h2>{e.mydes}</h2>
                 <h3>{e.name}</h3>
                 <p className="price">{e.price}</p>
-            </div>
+              <div className="btn-area">
+                  <button className="btn1">{e.add}</button>
+                  <button className="btn2"onClick={NextPage}>{e.but}</button>
+              </div>
+        </div>
       ))}
-
-
-      
     </>
   )
 }

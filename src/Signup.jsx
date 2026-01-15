@@ -4,61 +4,58 @@ import "./Log.css"
 import ElectricBorder from './ElectricBorder'
 
 const Rform = () => {
-  let [formData, setformdata] = useState({
-    name: "",
-    num: "",
-    email: "",
-    pass: "",
-    cpass: "",
-  });
 
-  let handlchange = (e) => {
-    setformdata({ ...formData, [e.target.name]: e.target.value });
-  };
+    let [formData, setformdata] = useState({
+        name: "",
+        num: "",
+        email: "",
+        pass: "",
+        cpass: "",
+      });
 
-  let submitform = (e) => {
-    e.preventDefault();
+    let handlchange = (e) => {
+        setformdata({ ...formData, [e.target.name]: e.target.value });
+      };
 
-     if(formData.name==""){
-      alert("name empty")
-    e.preventDefault();
+    let submitform = (e) => {
+        e.preventDefault();
 
+    if(formData.name==""){
+        alert("name empty")
+        e.preventDefault();
+      }
 
-     }
-     else if(formData.num==""){
-            alert("number empty")
-    e.preventDefault();
+    else if(formData.num==""){
+        alert("number empty")
+        e.preventDefault();
+      }
 
-     }
-     else if(formData.email==""){
-            alert("email empty")
-    e.preventDefault();
+    else if(formData.email==""){
+        alert("email empty")
+        e.preventDefault();
+      }
 
-     }else if(formData.pass==""){
-            alert("pass empty")
-    e.preventDefault();
+    else if(formData.pass==""){
+        alert("pass empty")
+        e.preventDefault();
+      }
 
-     }else if(formData.cpass==""){
-            alert("cpass empty")
-    e.preventDefault();
+    else if(formData.cpass==""){
+        alert("cpass empty")
+        e.preventDefault();
+      }
 
-     }
-     
+    else{
+        localStorage.setItem("Name",formData.name)
+        localStorage.setItem("num",formData.num)
+        localStorage.setItem("email",formData.email)
+        localStorage.setItem("pass",formData.pass)
+        localStorage.setItem("cpass",formData.cpass)
 
-     else{
-     localStorage.setItem("Name",formData.name)
-     localStorage.setItem("num",formData.num)
-     localStorage.setItem("email",formData.email)
-     localStorage.setItem("pass",formData.pass)
-     localStorage.setItem("cpass",formData.cpass)
+        navigate("/Login");
+      }}
 
-
-      navigate("/Login");
-
-  }}
-
-
-    const navigate=useNavigate()
+      const navigate=useNavigate()
   
 
 

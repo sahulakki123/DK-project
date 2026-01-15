@@ -15,35 +15,45 @@ const Creatines1 = () => {
       im:[im1], 
       mydes:"MuscleTech Platinum", 
       name:"100% Creatine", 
-      price:"₹ 429.00"
+      price:"₹ 429.00",
+      add:"add card",
+      but:"Buy Now"
     },
     {
        id:"2",
        im:[im2], 
        mydes:"ON Micronised", 
        name:"Creatine Powder",
-       price:"₹ 489.00"
+       price:"₹ 489.00",
+       add:"add card",
+      but:"Buy Now"
     },
     {
       id:"3",
       im:[im3], 
       mydes:"MuscleBlaze Creatine", 
       name:"Monohydrate CreAMP", 
-      price:"₹ 489.00"
+      price:"₹ 489.00",
+      add:"add card",
+      but:"Buy Now"
     },
     {
       id:"4",
       im:[im4], 
       mydes:"Wellcore - Pure Micronised", 
       name:"Creatine Monohydrate", 
-      price:"₹ 569.00"
+      price:"₹ 569.00",
+      add:"add card",
+      but:"Buy Now"
     },
     {
       id:"5",
       im:[im5], 
       mydes:"GNC Creatine", 
       name:"Monohydrate", 
-      price:"₹ 439.00"
+      price:"₹ 439.00",
+      add:"add card",
+      but:"Buy Now"
     },
   ]
 

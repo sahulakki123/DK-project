@@ -13,28 +13,36 @@ const Pre_Workout1 = () => {
           im:[im1], 
           mydes:"Big Muscles", 
           name:"Pre Workout", 
-          price:"₹ 1,199.00"
+          price:"₹ 1,199.00",
+          add:"add card",
+          but:"Buy Now"
         },
         {
            id:"2",
            im:[im2], 
            mydes:"MuscleBlaze Pre", 
            name:"Workout WrathX",
-           price:"₹ 1,099.00"
+           price:"₹ 1,099.00",
+           add:"add card",
+           but:"Buy Now"
         },
         {
           id:"3",
           im:[im3], 
           mydes:"The Big Daddy", 
           name:"Pre Workout", 
-          price:"₹ 1,399.00"
+          price:"₹ 1,399.00",
+          add:"add card",
+          but:"Buy Now"
         },
         {
           id:"4",
           im:[im4], 
           mydes:"Dynamite", 
           name:"Pre-Workout", 
-          price:"₹ 749.00"
+          price:"₹ 749.00",
+          add:"add card",
+          but:"Buy Now"
         }
  
       ]

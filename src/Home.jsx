@@ -20,35 +20,45 @@ const Home = () => {
       im:[im1], 
       mydes:"MuscleTech Nitro", 
       name:"Tech Whey Protein", 
-      price:"₹ 2,899.00"
+      price:"₹ 2,899.00",
+      add:"add card",
+      but:"Buy Now"
     },
     {
        id:"2",
        im:[im2], 
        mydes:"MuscleTech Nitro Tech", 
        name:"Ripped Whey Protein",
-       price:"₹ 3,149.00"
+       price:"₹ 3,149.00",
+       add:"add card",
+       but:"Buy Now"
     },
     {
       id:"3",
       im:[im3], 
       mydes:"My Protein Impact", 
       name:"Whey Protein", 
-      price:"₹ 3,099.00"
+      price:"₹ 3,099.00",
+      add:"add card",
+      but:"Buy Now"
     },
     {
       id:"4",
       im:[im4], 
       mydes:"Labrada Nutrition", 
       name:"100% Whey Protein", 
-      price:"₹ 2,699.00"
+      price:"₹ 2,699.00",
+      add:"add card",
+      but:"Buy Now"
     },
     {
       id:"5",
       im:[im5], 
       mydes:"ATOM Whey", 
       name:"Protein", 
-      price:"₹ 2,165.00"
+      price:"₹ 2,165.00",
+      add:"add card",
+      but:"Buy Now"
     },
   ]
 

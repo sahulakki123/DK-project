@@ -8,6 +8,7 @@ import Offers from './Offers'
 import Login from './Login'
 import Signup from './Signup'
 import Profile from './Profile'
+import Order from './Pages/Order'
 
 const Routing = () => {
   return (
@@ -21,6 +22,8 @@ const Routing = () => {
         <Route path='login' element={<Login/>}/>
         <Route path='signup' element={<Signup/>}/>
         <Route path='profile' element={<Profile/>}/>
+        <Route path='order' element={<Order/>}/>
+        
         <Route path="*" element={<h1>Error</h1>}/>
 
         </Route>

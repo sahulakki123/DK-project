@@ -10,7 +10,7 @@ const Contact = () => {
           Contact Us
         </h2>
         <p className="text-sm text-center text-gray-500 mb-6">
-          We’d love to hear from you
+          Wed love to hear from you
         </p>
 
         {/* Form */}

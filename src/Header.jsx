@@ -11,10 +11,10 @@ const Header = () => {
   
   return (
     <>
-             <header className="w-full flex h-15 justify-around items-center  bg-amber-50 text-gray-950 cursor-pointer">
+             <header className="w-full flex h-15 justify-around items-center  bg-amber-50 text-gray-950 cursor-pointer list-none">
             <img src={logo} alt="" className="h-14 rounded-2xl" />
             <nav>
-                <ul className=" hidden sm:flex gap-10 font-bold texT-2xl ">
+                <ul className=" hidden sm:flex gap-10 font-bold texT-2x">
                 </ul>
             </nav>
                 <div className='hidden sm:flex gap-10 font-bold texT-2xl'>
