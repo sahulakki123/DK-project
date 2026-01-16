@@ -2,7 +2,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Center container */
 .form-container {
   display: flex;
   justify-content: center;
@@ -12,7 +11,6 @@ body {
 
 }
 
-/* Form card */
 .rform {
   width: 350px;
   padding: 30px;
@@ -25,7 +23,6 @@ body {
   background: linear-gradient(135deg, #000000);
 }
 
-/* Heading */
 .rform h2 {
   display: inline-block;
   margin-bottom: 15px;
@@ -34,7 +31,6 @@ body {
   cursor: default;
 }
 
-/* Signup clickable text */
 .rform h2:nth-child(2) {
   margin-left: 8px;
   cursor: pointer;
@@ -47,7 +43,6 @@ body {
   text-decoration: underline;
 }
 
-/* Labels */
 .form-group label {
   font-size: 14px;
   color: #fff;
@@ -56,7 +51,6 @@ body {
   display: block;
 }
 
-/* Inputs */
 .rform input {
   width: 100%;
   padding: 10px;
@@ -73,7 +67,6 @@ body {
   color: #eee;
 }
 
-/* Button */
 .rform button {
   width: 100%;
   padding: 12px;

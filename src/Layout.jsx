@@ -11,7 +11,7 @@ const Layout = () => {
 
 
 
-    
+
   return (
    <>
         <header className="w-full flex h-15 justify-around items-center bg-amber-50 text-gray-950 cursor-pointer list-none">
@@ -21,7 +21,13 @@ const Layout = () => {
 
 
                        <li className="hover:text-sky-400 cursor-pointer"><Link to="/home">HOME</Link></li>
-                       <li className="hover:text-sky-400 cursor-pointer"><Link to="/products">PRODUCTS</Link></li>
+                        <li className="hover:text-sky-400 cursor-pointer"><Link to="/products"><select>
+                        <option value="">PRODUCTS</option>
+                        <option value="">Whey Protein</option>
+                        <option value="">Creatine</option>
+                        <option value="">Pre Workout</option>
+                        <option value="">Peanut</option>
+                        </select></Link></li>
                        <li className="hover:text-sky-400 cursor-pointer"><Link to="/contact">CONTACT</Link></li>
                        <li className="hover:text-sky-400 cursor-pointer"><Link to="/offers">OFFERS</Link></li>
                    </ul>

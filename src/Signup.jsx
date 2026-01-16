@@ -19,30 +19,31 @@ const Rform = () => {
 
     let submitform = (e) => {
         e.preventDefault();
+        let valid=true
 
     if(formData.name==""){
         alert("name empty")
-        e.preventDefault();
+        valid=false
       }
 
-    else if(formData.num==""){
+    else if( isNaN(formData.num)){
         alert("number empty")
-        e.preventDefault();
+        valid=false
       }
 
     else if(formData.email==""){
         alert("email empty")
-        e.preventDefault();
+        valid=false
       }
 
     else if(formData.pass==""){
         alert("pass empty")
-        e.preventDefault();
+        valid=false
       }
 
     else if(formData.cpass==""){
         alert("cpass empty")
-        e.preventDefault();
+        valid.form
       }
 
     else{
@@ -55,8 +56,12 @@ const Rform = () => {
         navigate("/Login");
       }}
 
-      const navigate=useNavigate()
+       const navigate=useNavigate()
   
+            const NextPage = () => {
+      navigate("/Login");
+
+    };
 
 
 
@@ -75,7 +80,7 @@ const Rform = () => {
       
 
         <form className="modern-form" onSubmit={submitform}>
-          <h2>Signup</h2>
+          <h2>Signup & </h2><h2 onClick={NextPage}>Login</h2>
 
           <label>Enter Name</label>
           <input type="text" name="name" value={formData.name} onChange={handlchange} />

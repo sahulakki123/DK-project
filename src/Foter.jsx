@@ -5,7 +5,17 @@ import { FaYoutube } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 
+import { useNavigate } from "react-router-dom";
+
 const Footer = () => {
+
+    
+         const navigate=useNavigate()
+  
+            const NextPage = () => {
+      navigate("/Signup");
+
+    };
     return (
         <footer className="w-full bg-white border-t mt-15">
             <div className="max-w-7xl mx-auto px-10 py-14 flex flex-col md:flex-row justify-between gap-10 ">
@@ -32,7 +42,7 @@ const Footer = () => {
                             placeholder="Email address"
                             className="border rounded-2xl px-6 py-4 text-lg outline-none"
                         />
-                        <button className="bg-black text-white rounded-full px-8 py-4 text-lg w-fit hover:bg-red-600 transition-colors cursor-pointer">
+                        <button className="bg-black text-white rounded-full px-8 py-4 text-lg w-fit hover:bg-red-600 transition-colors cursor-pointer" onClick={NextPage}>
                             Sign up
                         </button>
                     </div>

@@ -36,7 +36,9 @@ const Rform = () => {
     
   }
 
-
+  const NextPage = () => {
+        navigate("/Signup");
+  };
   
 
 
@@ -59,7 +61,8 @@ const Rform = () => {
 
 
       <form className="rform" onSubmit={submitform}>
-        <h2>Login</h2>
+        <h2>Login & </h2><h2 onClick={NextPage}>Signup</h2>
+
 
         <div className="form-group">
           <label>Email</label>
