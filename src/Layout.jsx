@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './assets/dklogo.jpeg'
+import logo from './assets/logo12.png'
 import "./Tailwind.css"
 import { Link, Outlet } from 'react-router-dom'
 import Foter from './Foter'

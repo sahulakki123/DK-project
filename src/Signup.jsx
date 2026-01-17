@@ -52,7 +52,8 @@ const Rform = () => {
         localStorage.setItem("email",formData.email)
         localStorage.setItem("pass",formData.pass)
         localStorage.setItem("cpass",formData.cpass)
-
+       
+        alert("Registration successful!");
         navigate("/Login");
       }}
 
@@ -68,15 +69,15 @@ const Rform = () => {
 
   return (
     <>
- <div className="form-container">
-<ElectricBorder
-  color="#f80a0aff"
-  speed={1}
-  chaos={0.5}
-  thickness={2}
-  style={{ borderRadius: 16 }}>
-  <div>
-    <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
+     <div className="form-container">
+    <ElectricBorder
+        color="#f80a0aff"
+        speed={1}
+        chaos={0.5}
+        thickness={2}
+        style={{ borderRadius: 16 }}>
+      <div>
+        <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
       
 
         <form className="modern-form" onSubmit={submitform}>

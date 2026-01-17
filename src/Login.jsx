@@ -6,35 +6,33 @@ import ElectricBorder from './ElectricBorder'
 
 
 const Rform = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    pass: "",
-  });
-
-    const navigate=useNavigate()
 
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    
-           
-       
-  }
+      const navigate=useNavigate()
 
+      const [formData, setFormData] = useState({
+          email: "",
+          pass: "",
+        });
 
-  const submitform = (e) => {
+      const handleChange = (e) => {
+          setFormData({ ...formData, [e.target.name]: e.target.value });   
+        }
 
-  if(localStorage.getItem("email")==formData.email && localStorage.getItem("pass")==formData.pass){
+      const submitform = (e) => {
 
-    e.preventDefault();
+      if(localStorage.getItem("email")==formData.email && localStorage.getItem("pass")==formData.pass){
+
+      e.preventDefault();
+        alert("Login Successful ");
         navigate("/home");
-  }
-  else{
-       alert("invalid")
+        }
+      else{
+       alert("Invalid email or password")
        e.preventDefault()
-  }
+        }
     
-  }
+      }
 
   const NextPage = () => {
         navigate("/Signup");
@@ -52,8 +50,7 @@ const Rform = () => {
   speed={1}
   chaos={0.5}
   thickness={2}
-  style={{ borderRadius: 16 }}
->
+  style={{ borderRadius: 16 }}>
   <div>
     <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
  
@@ -78,7 +75,7 @@ const Rform = () => {
       </form>
           </p>
   </div>
-</ElectricBorder>
+    </ElectricBorder>
     </div>
     </>
   )
