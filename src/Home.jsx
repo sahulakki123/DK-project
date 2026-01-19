@@ -11,6 +11,10 @@ import Creatines1 from './Creatines1'
 import Pre_Workout1 from './Pre_Workout1'
 import Peanut1 from './Pages/Peanut1'
 
+
+import ScrollFloat from './Library/ScrollFloat';
+
+
 const Home = () => {
 
 
@@ -68,8 +72,23 @@ const Home = () => {
 
   return (
     <>
-      <img src={im} alt="" height="100%" width="100%"/>
-        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>Whey Proteins</h1>
+    
+
+          <img src={im} alt="" height="100%" width="100%"/>
+        
+        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>
+
+          <ScrollFloat
+  animationDuration={1}
+  ease='back.inOut(2)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=40%'
+  stagger={0.03}
+>
+  Whey Proteins
+</ScrollFloat>
+          
+          </h1>
 
 
         <div style={{display:"flex"}}>

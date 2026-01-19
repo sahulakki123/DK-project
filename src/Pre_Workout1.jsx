@@ -6,6 +6,8 @@ import im3 from './assets/tbd.webp'
 import im4 from './assets/dp.avif'
 import Pre_Workout2 from './Pre_Workout2'
 
+import ScrollFloat from './Library/ScrollFloat';
+
 const Pre_Workout1 = () => {
      let Props=[
         {
@@ -48,7 +50,21 @@ const Pre_Workout1 = () => {
       ]
   return (
     <>
-        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>Pre Workout</h1>
+        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>
+                              <ScrollFloat
+  animationDuration={1}
+  ease='back.inOut(2)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=40%'
+  stagger={0.03}
+>
+  Pre Workout
+</ScrollFloat>
+          
+          
+          
+          
+          </h1>
 
         <div style={{display:"flex"}}>
           <Pre_Workout2 Mydata={Props}/>

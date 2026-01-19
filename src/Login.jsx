@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Log.css";
 import { useNavigate } from "react-router-dom";
-import ElectricBorder from './ElectricBorder'
+import ElectricBorder from './Library/ElectricBorder'
 
 
 

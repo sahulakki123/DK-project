@@ -7,6 +7,8 @@ import im3 from '../assets/cc Peanut.avif'
 import im4 from '../assets/o p peanut.webp'
 import im5 from '../assets/os peanut.webp'
 
+import ScrollFloat from '../Library/ScrollFloat';
+
 const Peanut1 = () => {
 
   let Props=[
@@ -63,7 +65,19 @@ const Peanut1 = () => {
 
   return (
     <>
-        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>Peanut Butter</h1>
+        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>
+
+                              <ScrollFloat
+  animationDuration={1}
+  ease='back.inOut(2)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=40%'
+  stagger={0.03}
+>
+  Peanut Butter
+</ScrollFloat>
+          
+          </h1>
 
         <div style={{display:"flex"}}>
             <Peanut2 Mydata={Props}/>

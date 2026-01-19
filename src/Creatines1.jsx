@@ -8,6 +8,8 @@ import im3 from './assets/mc.webp'
 import im4 from './assets/wpm.webp'
 import im5 from './assets/gnc.webp'
 
+import ScrollFloat from './Library/ScrollFloat';
+
 const Creatines1 = () => {
   let Props=[
     {
@@ -63,11 +65,25 @@ const Creatines1 = () => {
 
   return (
     <>
-        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>Creatines</h1>
+        <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>
+
+
+
+                    <ScrollFloat
+  animationDuration={1}
+  ease='back.inOut(2)'
+  scrollStart='center bottom+=50%'
+  scrollEnd='bottom bottom-=40%'
+  stagger={0.03}
+>
+  Creatines
+</ScrollFloat>
+          </h1>
 
         <div style={{display:"flex"}}>
           <Creatines2 Mydata={Props}/>
         </div>
+        
     </>
   )
 }
