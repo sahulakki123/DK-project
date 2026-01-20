@@ -10,6 +10,10 @@ import Signup from './Signup'
 import Profile from './Profile'
 import Order from './Pages/Order'
 import Creatines1 from './Creatines1'
+import Pre_Workout1 from './Pre_Workout1'
+import Peanut1 from './Pages/Peanut1'
+import Multivitamins1 from './Pages/Multivitamins1'
+import MassGainer1 from './Pages/MassGainer1'
 
 const Routing = () => {
   return (
@@ -23,6 +27,10 @@ const Routing = () => {
         <Route path='profile' element={<Profile/>}/>
         <Route path='order' element={<Order/>}/>
         <Route path='creatines' element={<Creatines1/>}/>
+        <Route path='Pre_Workout'element={<Pre_Workout1/>} /> 
+        <Route path='Peanut'element={<Peanut1/>} /> 
+        <Route path='Multivitamins'element={<Multivitamins1/>} /> 
+        <Route path='Mass_Gainer'element={<MassGainer1/>} /> 
         <Route path="*" element={<h1>Error</h1>}/>
 
         </Route>

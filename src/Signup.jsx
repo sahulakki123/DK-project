@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Log.css"
 import ElectricBorder from './Library/ElectricBorder'
+import im from './assets/Eveay.jpg'
 
 const Rform = () => {
 
@@ -69,7 +70,13 @@ const Rform = () => {
 
   return (
     <>
-     <div className="form-container">
+     <div className="form-container"  style={{
+  backgroundImage: `url(${im})`,
+    minHeight: "100vh",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+}}>
     <ElectricBorder
         color="#f80a0aff"
         speed={1}

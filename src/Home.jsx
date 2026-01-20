@@ -13,6 +13,8 @@ import Peanut1 from './Pages/Peanut1'
 
 
 import ScrollFloat from './Library/ScrollFloat';
+import Multivitamins1 from './Pages/Multivitamins1'
+import MassGainer1 from './Pages/MassGainer1'
 
 
 const Home = () => {
@@ -72,31 +74,27 @@ const Home = () => {
 
   return (
     <>
-    
-
-          <img src={im} alt="" height="100%" width="100%"/>
-        
+      <img src={im} alt="" height="100%" width="100%"/>
         <h1 style={{color: "red", fontSize: "40px", textAlign: "center", marginTop: "20px", fontWeight: "bold"}}>
 
           <ScrollFloat
-  animationDuration={1}
-  ease='back.inOut(2)'
-  scrollStart='center bottom+=50%'
-  scrollEnd='bottom bottom-=40%'
-  stagger={0.03}
->
-  Whey Proteins
-</ScrollFloat>
-          
+            animationDuration={1}
+            ease='back.inOut(2)'
+            scrollStart='center bottom+=50%'
+            scrollEnd='bottom bottom-=40%'
+            stagger={0.03}>
+            Whey Proteins
+          </ScrollFloat>
+   
           </h1>
-
-
-        <div style={{display:"flex"}}>
-          <Child Mydata={Props}/>
-        </div>
+            <div style={{display:"flex"}}>
+            <Child Mydata={Props}/>
+          </div>
         <Creatines1/>
         <Pre_Workout1/>
         <Peanut1/>
+        <Multivitamins1/>
+        <MassGainer1/>
         
     </>
   )
