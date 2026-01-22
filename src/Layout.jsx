@@ -24,7 +24,7 @@ const navigate = useNavigate();
                         <li className="hover:text-gray-400 cursor-pointer"><Link to="/products">
                         <select onChange={(e) => navigate(e.target.value)}>
                         <option >PRODUCTS</option>
-                        <option value="">Whey Protein</option>
+                        <option >Whey Protein</option>
                         <option value="creatines">Creatine</option>
                         <option value="Pre_Workout">Pre Workout</option>
                         <option value="Peanut">Peanut</option>

@@ -1,12 +1,10 @@
 import React from 'react'
-import Creatines1 from './Creatines1'
-
+import im from './assets/Eveay.jpg'
 
 const Products = () => {
   return (
     <>
-    <Creatines1/>
-    
+    <img src={im} alt=""  height="100%" width="100%"/>
     </>
   )
 }
