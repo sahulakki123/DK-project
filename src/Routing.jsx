@@ -14,6 +14,7 @@ import Pre_Workout1 from './Pre_Workout1'
 import Peanut1 from './Pages/Peanut1'
 import Multivitamins1 from './Pages/Multivitamins1'
 import MassGainer1 from './Pages/MassGainer1'
+import Datashow from './Datashow'
 
 const Routing = () => {
   return (
@@ -31,6 +32,7 @@ const Routing = () => {
         <Route path='Peanut'element={<Peanut1/>} /> 
         <Route path='Multivitamins'element={<Multivitamins1/>} /> 
         <Route path='Mass_Gainer'element={<MassGainer1/>} /> 
+        <Route path='myData'element={<Datashow/>} /> 
         <Route path="*" element={<h1>Error</h1>}/>
 
         </Route>

@@ -22,24 +22,30 @@ const navigate = useNavigate();
 
                        <li className="hover:text-gray-400 cursor-pointer"><Link to="/home">HOME</Link></li>
                         <li className="hover:text-gray-400 cursor-pointer"><Link to="/products">
-                        <select onChange={(e) => navigate(e.target.value)}>
+                        <select onChange={(e) => navigate(e.target.value)} className="bg-amber-200 appearance-none duration-300 ease-in-out  cursor-pointer">
                         <option >PRODUCTS</option>
-                        <option >Whey Protein</option>
-                        <option value="creatines">Creatine</option>
-                        <option value="Pre_Workout">Pre Workout</option>
-                        <option value="Peanut">Peanut</option>
-                        <option value="Multivitamins">Fish Oil</option>
-                        <option value="Mass_Gainer">Mass Gainer</option>
+                        <option >WHEY PROTEIN</option>
+                        <option value="creatines">CREATINE</option>
+                        <option value="Pre_Workout">PRE WORKOUT</option>
+                        <option value="Peanut">PEANUT</option>
+                        <option value="Multivitamins">FISH OIL</option>
+                        <option value="Mass_Gainer">MASS GAINER</option>
                         </select>
                         </Link></li>
                        <li className="hover:text-gray-400 cursor-pointer"><Link to="/contact">CONTACT</Link></li>
                        <li className="hover:text-gray-400 cursor-pointer"><Link to="/offers">OFFERS</Link></li>
                    </ul>
                </nav>
-                <div className='hidden sm:flex gap-10 font-serif texT-2xl font-bold'>
-                    <li className="hover:text-gray-400 cursor-pointer"><Link to="/login">LOG IN</Link></li>
-                    <li className="hover:text-gray-400  cursor-pointer"><Link to="/signup">SIGN UP</Link></li>
-                    <li className="hover:text-gray-400  cursor-pointer"><Link to="/profile">PROFILE</Link></li>
+                <div className='hidden sm:flex gap-10 font-serif texT-2xl font-bold'> 
+
+                    <li className="hover:text-gray-400  cursor-pointer"><Link to="/profile">
+                    <select onChange={(e) => navigate(e.target.value)} className="bg-amber-200 appearance-none border-none outline-none ring-0 focus:outline-none focus:ring-0 shadow-none px-4 py-1 rounded-xl cursor-pointer ">
+                        <option >PROFILE</option>
+                        <option value="/login">LOG IN</option>
+                        <option value="/signup">SIGN UP</option>
+                        <option value="/myData">MY DATA</option>
+                        </select>
+                    </Link></li>
                </div> 
         </header>
         <Outlet/>
