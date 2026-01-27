@@ -21,7 +21,7 @@ const Datashow = () => {
 
     useEffect(()=>{
        FetchData()
-    })
+    }, [])
 
     let Deletedata=(id)=>{
         let api = `http://localhost:3000/protein/${id}`
@@ -36,7 +36,7 @@ const Datashow = () => {
   return (
     <>
 <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center">Order List</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center cursor-pointer">My Order List</h1>
 
       <div className="overflow-x-auto">
         <table className="w-full border border-gray-300 shadow-lg rounded-lg">
@@ -54,13 +54,13 @@ const Datashow = () => {
           <tbody>
             {
               data.map((e) => (
-                <tr key={e.id} className="text-center hover:bg-gray-100 transition">
+                <tr key={e.id} className="text-center hover:bg-gray-100 transition">     
                   <td className="p-2 border">{e.username}</td>
-                  <td className="p-2 border">{e.number || "N/A"}</td>
+                  <td className="p-2 border">{e.number}</td>
                   <td className="p-2 border">{e.productName}</td>
                   <td className="p-2 border">{e.quantity}</td>
                   <td className="p-2 border">{e.deliveryAddress}</td>
-                  <td className="p-2 border"><button onClick={() => Deletedata(e.id)}className="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
+                  <td className="p-2 border"><button onClick={() => Deletedata(e.id)}className="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 cursor-pointer">
                       Delete
                     </button> </td>
                 </tr>
