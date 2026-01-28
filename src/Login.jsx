@@ -2,37 +2,39 @@ import React, { useState } from "react";
 import "./Log.css";
 import { useNavigate } from "react-router-dom";
 import ElectricBorder from './Library/ElectricBorder'
-
-
+import Galaxy from './Library/Galaxy';
 
 const Rform = () => {
 
 
-      const navigate=useNavigate()
+      let navigate=useNavigate()
 
-      const [formData, setFormData] = useState({
-          email: "",
-          pass: "",
-        });
+      let [email, setemail] = useState("")
+      let [pass, setpass] = useState("")
+   
+   
 
-      const handleChange = (e) => {
-          setFormData({ ...formData, [e.target.name]: e.target.value });   
+      let submitform = (e) => {
+        e.preventDefault();
+
+        let users = JSON.parse(localStorage.getItem("users")) || []
+
+        let existuser = users.find((e)=>{
+          return e.email == email
+        })
+        if (!existuser){
+          alert("Please signup first")
+          return
         }
-
-      const submitform = (e) => {
-
-      if(localStorage.getItem("email")==formData.email && localStorage.getItem("pass")==formData.pass){
-
-      e.preventDefault();
-        alert("Login Successful ");
-        navigate("/home");
+        if (pass !=existuser.pass ){
+          alert("Invalid Password")
+          return
         }
-      else{
-       alert("Invalid email or password")
-       e.preventDefault()
-        }
-    
+        localStorage.setItem("useremail", email)
+        alert("Login Successfull")
+        navigate("/home")
       }
+      
 
   const NextPage = () => {
         navigate("/Signup");
@@ -44,7 +46,24 @@ const Rform = () => {
 
 <>
 
-<div className="form-container">
+<div className="form-container" style={{ width: '100%', height: '800px', position: 'relative', backgroundColor: "black" }}>
+
+<Galaxy 
+    mouseRepulsion
+    mouseInteraction
+    density={1}
+    glowIntensity={0.3}
+    saturation={0}
+    hueShift={140}
+    twinkleIntensity={0.3}
+    rotationSpeed={0.1}
+    repulsionStrength={2}
+    autoCenterRepulsion={0}
+    starSpeed={0.5}
+    speed={1}
+/>
+
+
 <ElectricBorder
   color="#f80a0aff"
   speed={1}
@@ -58,24 +77,39 @@ const Rform = () => {
 
 
       <form className="rform" onSubmit={submitform}>
-        <h2>Login & </h2><h2 onClick={NextPage}>Signup</h2>
-
+        <h1 className="font-bold text-white font-serif flex text-2xl ml-30">Log In</h1>
 
         <div className="form-group">
           <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" required />
+          <input type="email" name="email" value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder="Enter your email" required />
         </div>
 
         <div className="form-group">
           <label>Password</label>
-          <input type="password" name="pass" value={formData.pass} onChange={handleChange} placeholder="Enter your password" required />
+          <input type="password" name="pass" value={pass} onChange={(e)=>{setpass(e.target.value)}} placeholder="Enter your password" required />
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className=" bg-amber-500 hover:bg-amber-600 text-white">Submit</button>
+        <h2>Don't have an account? <h2 onClick={NextPage}>Signup</h2>  </h2>
       </form>
           </p>
   </div>
     </ElectricBorder>
+
+    <Galaxy 
+        mouseRepulsion
+        mouseInteraction
+        density={1}
+        glowIntensity={0.3}
+        saturation={0}
+        hueShift={140}
+        twinkleIntensity={0.3}
+        rotationSpeed={0.1}
+        repulsionStrength={2}
+        autoCenterRepulsion={0}
+        starSpeed={0.5}
+        speed={1}
+    />
     </div>
     </>
   )

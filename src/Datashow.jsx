@@ -9,6 +9,16 @@ const Datashow = () => {
         let api = 'http://localhost:3000/protein'
 
         axios.get(api).then( (res)=>{
+          console.log(res.data);
+          let data = res.data
+          let finaldata = data.filter((e)=>{
+            return e.loggedinuser == localStorage.getItem("useremail")
+          })
+          setdata(finaldata)
+          
+        })
+
+        axios.get(api).then( (res)=>{
             console.log(res.data);
             setdata(res.data)
             

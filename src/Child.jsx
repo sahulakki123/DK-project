@@ -7,7 +7,7 @@ const Child = ({Mydata}) => {
   const navigate = useNavigate();
 
   const NextPage = () => {
-    navigate("/order");
+    navigate("/bookingform");
   };
 
   return (

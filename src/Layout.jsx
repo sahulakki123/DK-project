@@ -22,7 +22,7 @@ const navigate = useNavigate();
 
                        <li className="hover:text-gray-400 cursor-pointer"><Link to="/home">HOME</Link></li>
                         <li className="hover:text-gray-400 cursor-pointer"><Link to="/products">
-                        <select onChange={(e) => navigate(e.target.value)} className="bg-amber-200 appearance-none duration-300 ease-in-out  cursor-pointer">
+                        <select onChange={(e) => navigate(e.target.value)} className="bg-amber-200 appearance-none duration-300 ease-in-out outline-none  cursor-pointer">
                         <option >PRODUCTS</option>
                         <option >WHEY PROTEIN</option>
                         <option value="creatines">CREATINE</option>
