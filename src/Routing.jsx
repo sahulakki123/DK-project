@@ -22,6 +22,7 @@ const Routing = () => {
     <>
     <Routes>
         <Route path='/' element={<Layout/>}>
+        <Route index element={<Home/>}/>
         <Route path='home' element={<Home/>}/>
         <Route path='products' element={<Products/>}/>
         <Route path='contact' element={<Contact/>}/>

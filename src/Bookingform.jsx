@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import Antigravity from './Library/Antigravity';
+import { useNavigate } from 'react-router-dom'
 
 const Bookingform = () => {
+    let navigate=useNavigate()
 
     let [form, setform] = useState({
         username:"",
@@ -30,6 +32,8 @@ const Bookingform = () => {
             let loggedemail = localStorage.getItem("useremail")
             axios.post(api, {...form, loggedinuser:loggedemail}).then((e)=>{
                 alert("Booking Confirmed")
+                navigate('/home')
+                
             })
         }
     }
