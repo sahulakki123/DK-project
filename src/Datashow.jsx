@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Antigravity from './Library/Antigravity';
 
 const Datashow = () => {
+  let [search, setsearch] = useState("")
 
     let [form, setform] = useState({
             username:"",
@@ -37,6 +38,11 @@ const Datashow = () => {
         })
 
     }
+
+    let FilterData = data.filter((e)=>{
+      return( e.username.toLowerCase().includes(search.toLowerCase())) || 
+      (e.number.toString().includes(search.toString()))
+    })
 
     useEffect(()=>{
        FetchData()
@@ -76,7 +82,17 @@ const Datashow = () => {
   return (
     <>
 <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center cursor-pointer">My Order List</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center cursor-pointer">My Order List || search <input type="text" value={search} onChange={(e)=>{setsearch(e.target.value)}} className="
+      w-full sm:w-72
+      px-4 py-2
+      border border-gray-300
+      rounded-xl
+      shadow-sm
+      focus:outline-none
+      focus:ring-2
+      focus:ring-amber-500
+      focus:border-amber-500
+      transition" /></h1>
 
       <div className="overflow-x-auto">
         <table className="w-full border border-gray-300 shadow-lg rounded-lg">
@@ -94,7 +110,7 @@ const Datashow = () => {
 
           <tbody>
             {
-              data.map((e) => (
+              FilterData.map((e) => (
                 <tr key={e.id} className="text-center hover:bg-gray-100 transition">     
                   <td className="p-2 border">{e.username}</td>
                   <td className="p-2 border">{e.number}</td>
