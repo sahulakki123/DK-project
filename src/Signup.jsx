@@ -41,7 +41,7 @@ const Rform = () => {
         }
         users.push(form)
         localStorage.setItem('users', JSON.stringify(users))
-        alert("Sinup succesfull")
+        alert("Signup Succesfull")
         navigate('/login')
       }
     }
