@@ -7,7 +7,14 @@ const Child = ({Mydata}) => {
   const navigate = useNavigate();
 
   const NextPage = () => {
-    navigate("/bookingform");
+    const isLoggedin = localStorage.getItem("isLoggedin") === "true";
+
+    if (!isLoggedin) {
+      alert("Please login or signup first");
+      navigate("/signup");
+    } else {
+      navigate("/bookingform");
+    }
   };
 
   return (

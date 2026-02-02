@@ -1,7 +1,21 @@
 import React from 'react'
 import './Child.css'
+import { useNavigate } from 'react-router-dom'
 
 const Pre_Workout2 = ({Mydata}) => {
+   
+   const navigate = useNavigate();
+ 
+   const NextPage = () => {
+     const isLoggedin = localStorage.getItem("isLoggedin") === "true";
+ 
+     if (!isLoggedin) {
+       alert("Please login or signup first");
+       navigate("/signup");
+     } else {
+       navigate("/bookingform");
+     }
+   };
   return (
     <>
     {
@@ -14,7 +28,7 @@ const Pre_Workout2 = ({Mydata}) => {
                 <p className="price">{e.price}</p>
                 <div className="btn-area">
                   <button className="btn1">{e.add}</button>
-                  <button className="btn2">{e.but}</button>
+                  <button className="btn2" onClick={NextPage}>{e.but}</button>
               </div>
             </div>
       ))}  

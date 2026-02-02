@@ -1,7 +1,23 @@
 import React from 'react'
 import './C.css'
+import { useNavigate } from 'react-router-dom'
 
 const MassGainer2 = ({Mydata}) => {
+
+
+     const navigate = useNavigate();
+  
+    const NextPage = () => {
+      const isLoggedin = localStorage.getItem("isLoggedin") === "true";
+  
+      if (!isLoggedin) {
+        alert("Please login or signup first");
+        navigate("/signup");
+      } else {
+        navigate("/bookingform");
+      }
+    };
+
   return (
     <>
                 {Mydata.map((e) => (
@@ -12,7 +28,7 @@ const MassGainer2 = ({Mydata}) => {
           <p className="price">{e.price}</p>
           <div className="btn-area">
                   <button className="btn1">{e.add}</button>
-                  <button className="btn2">{e.but}</button>
+                  <button className="btn2" onClick={NextPage}>{e.but}</button>
               </div>
         </div>
                 ))}

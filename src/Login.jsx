@@ -31,6 +31,8 @@ const Rform = () => {
           return
         }
         localStorage.setItem("useremail", email)
+        localStorage.setItem("isLoggedin", "true")
+        localStorage.setItem("currentuser", JSON.stringify(existuser))
         alert("Login Successfull")
         navigate("/home")
       }

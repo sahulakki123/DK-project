@@ -18,15 +18,6 @@
       "id": "2d95"
     },
     {
-      "username": "rajesh",
-      "number": "7854213690",
-      "productName": "pp",
-      "quantity": "3",
-      "deliveryAddress": "sawari 7854",
-      "loggedinuser": "lakkiss@gmail.com",
-      "id": "3435"
-    },
-    {
       "id": "5838",
       "username": "Pawan",
       "number": "7896345120",
@@ -54,13 +45,40 @@
       "loggedinuser": "lakkiss@gmail.com"
     },
     {
-      "id": "e0a4",
       "username": "amit",
       "number": "2536147890",
       "productName": "MB CC",
-      "quantity": "2",
+      "quantity": "1",
       "deliveryAddress": "Multai",
-      "loggedinuser": "lakkiss@gmail.com"
+      "loggedinuser": "lakkiss@gmail.com",
+      "id": "e0a4"
+    },
+    {
+      "username": "shiva",
+      "number": "7000454322",
+      "productName": "MB CC",
+      "quantity": "4",
+      "deliveryAddress": "Bhopal",
+      "loggedinuser": "shiva12@gmail.com",
+      "id": "84e9"
+    },
+    {
+      "id": "8c04",
+      "username": "shiva",
+      "number": "7000454322",
+      "productName": "MB CC",
+      "quantity": "2",
+      "deliveryAddress": "bhopal",
+      "loggedinuser": "ram1222@gmail.com"
+    },
+    {
+      "id": "5ccc",
+      "username": "shiva",
+      "number": "7000454322",
+      "productName": "MB CC",
+      "quantity": "2",
+      "deliveryAddress": "bhop",
+      "loggedinuser": "shiva12@gmail.com"
     }
   ]
 }
