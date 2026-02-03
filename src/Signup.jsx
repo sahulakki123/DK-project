@@ -7,7 +7,6 @@ const Rform = () => {
 
     let [form, setformdata] = useState({
         name: "",
-        num: "",
         email: "",
         pass: "",
         cpass: "",
@@ -25,11 +24,42 @@ const Rform = () => {
         alert("Please enter name")
         valid=false
       }
-
-    else if( isNaN(form.num)){
-        alert("Please enter number only")
-        valid=false
-      }
+    else if (form.email.trim() == '') {
+      alert('please enter your email')
+      valid = false
+    }
+    else if (!(form.email.includes('@gmail.com') || form.email.includes('@yahoo.com') || form.email.includes('@outlook.com'))) {
+      alert('please enter a valid email')
+      valid = false
+    }
+    else if (form.pass.trim() == '') {
+      alert('please enter your password')
+      valid = false
+    }
+    else if (!(form.pass.match(/[A-Z]/))) {
+      alert('password must contain one Capital Letter')
+      valid = false
+    }
+    else if (!(form.pass.match(/[a-z]/))) {
+      alert('password must contain one small letter')
+      valid = false
+    }
+    else if (!(form.pass.match(/[0-9]/))) {
+      alert('password must contain one number')
+      valid = false
+    }
+    else if (!(form.pass.match(/[!@#$%&*-_.`~^/?]/))) {
+      alert('password must contain one special character')
+      valid = false
+    }
+    else if (form.cpass.trim() == '') {
+      alert('please enter your confirm password')
+      valid = false
+    }
+    else if (form.pass != form.cpass) {
+      alert('password and confirm password are not same')
+      valid = false
+    }
       if(valid){
         let users = JSON.parse( localStorage.getItem('users')) || []
         let alredyuser = users.find( (e)=>{
@@ -85,13 +115,10 @@ const Rform = () => {
       
 
         <form className="modern-form" onSubmit={submitform}>
-          <h1 className="font-bold text-white font-serif flex text-2xl ml-22">Sign up Form</h1>
+          <h1 className="font-bold text-white font-serif flex text-2xl ml-28">Sign up Form</h1>
 
           <label>Enter Name</label>
           <input type="text" name="name" value={form.name} onChange={handlchange} />
-
-          <label>Enter Number</label>
-          <input type="text" name="num" value={form.num} onChange={handlchange} />
 
           <label>Enter Email</label>
           <input type="text" name="email" value={form.email} onChange={handlchange} />

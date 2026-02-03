@@ -1,6 +1,13 @@
-import React from "react";
+import  React from "react";
+import { useNavigate } from 'react-router-dom'
 
 const Profile = () => {
+  const navigate=useNavigate()
+  
+            const NextPage = () => {
+      navigate("/myData");
+
+    };
   return (
     <div className="min-h-screen flex justify-center items-center bg-cyan-300">
       <div className="w-80 bg-white rounded-lg shadow-md">
@@ -17,7 +24,7 @@ const Profile = () => {
             My Account
           </div>
 
-          <div className="p-4 border-b hover:bg-gray-100 cursor-pointer">
+          <div className="p-4 border-b hover:bg-gray-100 cursor-pointer"  onClick={NextPage}>
             My Orders
           </div>
 

@@ -1,16 +1,19 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import Antigravity from './Library/Antigravity';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation} from 'react-router-dom'
+
 
 const Bookingform = () => {
     let navigate=useNavigate()
+    const location = useLocation()
 
     let [form, setform] = useState({
         username:"",
         number:"",
-        productName:"",
+        productName: location.state?.productName || "",
         quantity:"",
+        price: location.state?.price || "",
         deliveryAddress:""
 
     })
@@ -26,7 +29,27 @@ const Bookingform = () => {
         if(form.username.trim()==""){
             alert("Name Cannot be empty")
             valid=false
-        }
+        }  
+        else if( isNaN(form.number)){
+        alert("Please enter number only")
+        valid=false
+       }
+       else if (isNaN(form.number)) {
+       alert('please enter your number in digits')
+       valid = false
+       }
+       else if(form.productName.trim()==""){
+        alert("productName be empty")
+            valid=false
+       }
+       else if(form.quantity.trim()==""){
+        alert("quantity be Empty")
+        valid=false
+       }
+       else if(form.deliveryAddress.trim()==""){
+        alert("deliveryAddress be empty")
+        valid=false
+       }
         if(valid){
             let api="http://localhost:3000/protein"
             let loggedemail = localStorage.getItem("useremail")
@@ -67,9 +90,11 @@ const Bookingform = () => {
 
         <input type="text" name="number" placeholder="Enter Mobile Number" value={form.number} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white "/>
 
-        <input type="text" name="productName" placeholder="Enter Product Name" value={form.productName} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white"/>
-
+        <input type="text" name="productName" value={form.productName} readOnly onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white"/>
+        
         <input type="number" name="quantity" placeholder="Enter Quantity" value={form.quantity} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white "/>
+
+        <input type="text" name="price" value={form.price} readOnly onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white"/>
 
         <textarea name="deliveryAddress" placeholder="Enter Delivery Address" value={form.deliveryAddress} onChange={handlchange} className="w-full p-3 border rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-amber-400 text-white" />
 

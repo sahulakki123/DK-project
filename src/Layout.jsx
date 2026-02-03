@@ -56,12 +56,9 @@ const Layout = () => {
             ) : (
 
                 <div>
-                <Link to="/profile">
-                    <select onChange={(e) => navigate(e.target.value)} className="bg-amber-200 appearance-none border-none outline-none ring-0 focus:outline-none focus:ring-0 shadow-none px-4 py-1 rounded-xl cursor-pointer ">
-                        <option >Profile</option>
-                        <option value="/myData">My data</option>
-                        </select>
-                    </Link>          
+                   <Link to="/profile" className="hover:text-gray-500 transition mr-10">Profile</Link>
+                       
+                        
                     
               <button onClick={handleLogout} className="px-4 py-1 rounded-lg bg-red-600 text-white hover:bg-red-500 transition">Log Out</button>
             </div>

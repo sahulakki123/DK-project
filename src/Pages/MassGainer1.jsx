@@ -17,8 +17,8 @@ let Props=[
               im:[im1], 
               mydes:"Nutrabay Gold Bulk Up", 
               name:"Mass Gainer", 
-              price:"₹ 1,999.00",
-              add:"add card",
+              price:1999.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
             {
@@ -26,8 +26,8 @@ let Props=[
                im:[im2], 
                mydes:"Nutrabay Mega Mass", 
                name:"Weight Gainer",
-               price:"₹ 999.00",
-               add:"add card",
+               price:999.00,
+               add:"Add To Cart",
                but:"Buy Now"
             },
             {
@@ -35,8 +35,8 @@ let Props=[
               im:[im3], 
               mydes:"Labrada Muscle", 
               name:"Mass Gainer", 
-              price:"₹ 1,149.00",
-              add:"add card",
+              price:1149.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
             {
@@ -44,8 +44,8 @@ let Props=[
               im:[im4], 
               mydes:"Optimum Nutrition (on) Serious", 
               name:"Mass Weight Gainer Powder", 
-              price:"₹ 999.00",
-              add:"add card",
+              price:999.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
             {
@@ -53,8 +53,8 @@ let Props=[
               im:[im5], 
               mydes:"Kevin Levrone Anabolic", 
               name:"Mass Gainer", 
-              price:"₹ 3,299.00",
-              add:"add card",
+              price:3299.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
           ]

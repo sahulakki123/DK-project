@@ -10,6 +10,7 @@ const Datashow = () => {
             number:"",
             productName:"",
             quantity:"",
+            price:"",
             deliveryAddress:""
     
         })
@@ -65,6 +66,7 @@ const Datashow = () => {
             number:e.number,
             productName:e.productName,
             quantity:e.quantity,
+            price:e.price,
             deliveryAddress:e.deliveryAddress
 
       })
@@ -98,11 +100,12 @@ const Datashow = () => {
         <table className="w-full border border-gray-300 shadow-lg rounded-lg">
           <thead className="bg-gray-800 text-white">
             <tr>
-              <th className="p-3 border">User Name</th>
+              <th className="p-3 border">Name</th>
               <th className="p-3 border">Mobile</th>
               <th className="p-3 border">Product</th>
               <th className="p-3 border">Qty</th>
-              <th className="p-3 border">City</th>
+              <th className="p-3 border">Price</th>
+              <th className="p-3 border">Address</th>
               <th className="p-3 border">Edit</th>
               <th className="p-3 border">Action</th>
             </tr>
@@ -116,6 +119,7 @@ const Datashow = () => {
                   <td className="p-2 border">{e.number}</td>
                   <td className="p-2 border">{e.productName}</td>
                   <td className="p-2 border">{e.quantity}</td>
+                  <td className="p-2 border">₹ {e.price*e.quantity}</td>
                   <td className="p-2 border">{e.deliveryAddress}</td>
                   <td className="p-2 border"><button onClick={()=>{showform(e)}} className="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 cursor-pointer">Edit</button></td>
                   <td className="p-2 border"><button onClick={() => Deletedata(e.id)} className="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 cursor-pointer">Delete</button> </td>
@@ -160,6 +164,8 @@ const Datashow = () => {
         <input type="text" name="productName" placeholder="Enter Product Name" value={form.productName} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white"/>
 
         <input type="number" name="quantity" placeholder="Enter Quantity" value={form.quantity} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white "/>
+
+        <input type="text" name="price" value={form.price} readOnly onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white "/>
 
         <textarea name="deliveryAddress" placeholder="Enter Delivery Address" value={form.deliveryAddress} onChange={handlchange} className="w-full p-3 border rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-amber-400 text-white" />
 

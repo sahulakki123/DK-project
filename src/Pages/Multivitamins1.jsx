@@ -18,8 +18,8 @@ const Multivitamins1 = () => {
               im:[im1], 
               mydes:"One Daily Multivitamin", 
               name:"Improves Energy, Immunity & Overall Health", 
-              price:"₹ 409.00",
-              add:"add card",
+              price:409.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
             {
@@ -27,8 +27,8 @@ const Multivitamins1 = () => {
                im:[im2], 
                mydes:"One Daily Multivitamin", 
                name:"mproves Energy, Immunity, Skin and Over",
-               price:"₹ 399.00",
-               add:"add card",
+               price:399.00,
+               add:"Add To Cart",
                but:"Buy Now"
             },
             {
@@ -36,8 +36,8 @@ const Multivitamins1 = () => {
               im:[im3], 
               mydes:"Mens Staminol Max", 
               name:"Testosterone Booster for Long-Lasting Perf", 
-              price:"₹ 1499.00",
-              add:"add card",
+              price:1499.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
             {
@@ -45,8 +45,8 @@ const Multivitamins1 = () => {
               im:[im4], 
               mydes:"50 Plus Multivitamin", 
               name:"For Healthy Heart, Prostate Support Cedarwood, and Nutmeg Oil.", 
-              price:"₹ 1299.00",
-              add:"add card",
+              price:1299.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
             {
@@ -54,8 +54,8 @@ const Multivitamins1 = () => {
               im:[im5], 
               mydes:"Triple Strength Fish Oil", 
               name:"Builds Muscle Strength & Inhaling certain scent molecules ", 
-              price:"₹ 899.00",
-              add:"add card",
+              price:899.00,
+              add:"Add To Cart",
               but:"Buy Now"
             },
           ]

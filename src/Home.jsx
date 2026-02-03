@@ -26,8 +26,8 @@ const Home = () => {
       im:[im1], 
       mydes:"MuscleTech Nitro", 
       name:"Tech Whey Protein", 
-      price:"₹ 2,899.00",
-      add:"add card",
+      price:2899.00,
+      add:"Add To Cart",
       but:"Buy Now"
     },
     {
@@ -35,8 +35,8 @@ const Home = () => {
        im:[im2], 
        mydes:"MuscleTech Nitro Tech", 
        name:"Ripped Whey Protein",
-       price:"₹ 3,149.00",
-       add:"add card",
+       price:3149.00,
+       add:"Add To Cart",
        but:"Buy Now"
     },
     {
@@ -44,8 +44,8 @@ const Home = () => {
       im:[im3], 
       mydes:"My Protein Impact", 
       name:"Whey Protein", 
-      price:"₹ 3,099.00",
-      add:"add card",
+      price:3099.00,
+      add:"Add To Cart",
       but:"Buy Now"
     },
     {
@@ -53,8 +53,8 @@ const Home = () => {
       im:[im4], 
       mydes:"Labrada Nutrition", 
       name:"100% Whey Protein", 
-      price:"₹ 2,699.00",
-      add:"add card",
+      price:2699.00,
+      add:"Add To Cart",
       but:"Buy Now"
     },
     {
@@ -62,8 +62,8 @@ const Home = () => {
       im:[im5], 
       mydes:"ATOM Whey", 
       name:"Protein", 
-      price:"₹ 2,165.00",
-      add:"add card",
+      price:2165.00,
+      add:"Add To Cart",
       but:"Buy Now"
     },
   ]
@@ -89,6 +89,7 @@ const Home = () => {
           </h1>
             <div style={{display:"flex"}}>
             <Child Mydata={Props}/>
+            
           </div>
         <Creatines1/>
         <Pre_Workout1/>

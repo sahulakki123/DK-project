@@ -15,8 +15,8 @@ const Pre_Workout1 = () => {
           im:[im1], 
           mydes:"Big Muscles", 
           name:"Pre Workout", 
-          price:"₹ 1,199.00",
-          add:"add card",
+          price:1199.00,
+          add:"Add To Cart",
           but:"Buy Now"
         },
         {
@@ -24,8 +24,8 @@ const Pre_Workout1 = () => {
            im:[im2], 
            mydes:"MuscleBlaze Pre", 
            name:"Workout WrathX",
-           price:"₹ 1,099.00",
-           add:"add card",
+           price:1099.00,
+           add:"Add To Cart",
            but:"Buy Now"
         },
         {
@@ -33,8 +33,8 @@ const Pre_Workout1 = () => {
           im:[im3], 
           mydes:"The Big Daddy", 
           name:"Pre Workout", 
-          price:"₹ 1,399.00",
-          add:"add card",
+          price:1399.00,
+          add:"Add To Cart",
           but:"Buy Now"
         },
         {
@@ -42,8 +42,8 @@ const Pre_Workout1 = () => {
           im:[im4], 
           mydes:"Dynamite", 
           name:"Pre-Workout", 
-          price:"₹ 749.00",
-          add:"add card",
+          price:749.00,
+          add:"Add To Cart",
           but:"Buy Now"
         }
  
