@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./Log.css"
 import ElectricBorder from './Library/ElectricBorder'
 import Galaxy from './Library/Galaxy';
+
+
+
 const Rform = () => {
 
     let [form, setformdata] = useState({
@@ -80,15 +83,17 @@ const Rform = () => {
       }
     }
 
+
        const navigate=useNavigate()
-  
-            const NextPage = () => {
-      navigate("/Login");
 
-    };
-
+      const NextPage = () => {
+        navigate("/Login");
+        };
 
 
+      let NextPage1=()=>{
+      navigate("/home");
+      }
 
   return (
     <>
@@ -117,8 +122,10 @@ const Rform = () => {
       <div>
         <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
       
+          <button className="text-amber-200 ml-10"  onClick={NextPage1}>Go Back</button>
 
         <form className="modern-form" onSubmit={submitform}>
+
           <h1 className="font-bold text-white font-serif flex text-2xl ml-28">Sign up Form</h1>
 
           <label>Enter Name</label>
