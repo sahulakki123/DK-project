@@ -161,7 +161,7 @@ const Datashow = () => {
 
         <input type="text" name="number" placeholder="Enter Mobile Number" value={form.number} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white "/>
 
-        <input type="text" name="productName" placeholder="Enter Product Name" value={form.productName} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white"/>
+        <input type="text" name="productName" readOnly value={form.productName} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white"/>
 
         <input type="number" name="quantity" placeholder="Enter Quantity" value={form.quantity} onChange={handlchange} className="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-400 text-white "/>
 

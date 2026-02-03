@@ -5,6 +5,7 @@ import { useNavigate, useLocation} from 'react-router-dom'
 
 
 const Bookingform = () => {
+    
     let navigate=useNavigate()
     const location = useLocation()
 

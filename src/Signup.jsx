@@ -71,6 +71,10 @@ const Rform = () => {
         }
         users.push(form)
         localStorage.setItem('users', JSON.stringify(users))
+        localStorage.setItem("username", form.name)
+        localStorage.setItem("useremail", form.email)
+        localStorage.setItem("isLoggedin", "true")
+        
         alert("Signup Succesfull")
         navigate('/login')
       }
