@@ -91,7 +91,7 @@ body {
 
 
 body {
-  
+
   font-family: 'Poppins', sans-serif;
 }
 
@@ -145,7 +145,7 @@ body {
   margin: 10px 0 18px 0;
   border: none;
   outline: none;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: #fff;
   font-size: 14px;
@@ -164,5 +164,3 @@ body {
   border-radius: 8px;
   transition: 0.3s;
 }
-
-

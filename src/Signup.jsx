@@ -8,25 +8,25 @@ import Galaxy from './Library/Galaxy';
 
 const Rform = () => {
 
-    let [form, setformdata] = useState({
-        name: "",
-        email: "",
-        pass: "",
-        cpass: "",
-      });
+  let [form, setformdata] = useState({
+    name: "",
+    email: "",
+    pass: "",
+    cpass: "",
+  });
 
-    let handlchange = (e) => {
-        setformdata({ ...form, [e.target.name]: e.target.value });
-      };
+  let handlchange = (e) => {
+    setformdata({ ...form, [e.target.name]: e.target.value });
+  };
 
-    let submitform = (e) => {
-        e.preventDefault();
-        let valid=true
+  let submitform = (e) => {
+    e.preventDefault();
+    let valid = true
 
-    if(form.name.trim()==""){
-        alert("Please enter name")
-        valid=false
-      }
+    if (form.name.trim() == "") {
+      alert("Please enter name")
+      valid = false
+    }
     else if (form.email.trim() == '') {
       alert('please enter your email')
       valid = false
@@ -63,104 +63,104 @@ const Rform = () => {
       alert('password and confirm password are not same')
       valid = false
     }
-      if(valid){
-        let users = JSON.parse( localStorage.getItem('users')) || []
-        let alredyuser = users.find( (e)=>{
-          return e.email == form.email
-        })
-        if(alredyuser){
-          alert("Alredy a user")
-          return
-        }
-        users.push(form)
-        localStorage.setItem('users', JSON.stringify(users))
-        localStorage.setItem("username", form.name)
-        localStorage.setItem("useremail", form.email)
-        localStorage.setItem("isLoggedin", "true")
-        
-        alert("Signup Succesfull")
-        navigate('/login')
+    if (valid) {
+      let users = JSON.parse(localStorage.getItem('users')) || []
+      let alredyuser = users.find((e) => {
+        return e.email == form.email
+      })
+      if (alredyuser) {
+        alert("Alredy a user")
+        return
       }
+      users.push(form)
+      localStorage.setItem('users', JSON.stringify(users))
+      localStorage.setItem("username", form.name)
+      localStorage.setItem("useremail", form.email)
+      localStorage.setItem("isLoggedin", "true")
+
+      alert("Signup Succesfull")
+      navigate('/login')
     }
+  }
 
 
-       const navigate=useNavigate()
+  const navigate = useNavigate()
 
-      const NextPage = () => {
-        navigate("/Login");
-        };
+  const NextPage = () => {
+    navigate("/Login");
+  };
 
 
-      let NextPage1=()=>{
-      navigate("/home");
-      }
+  let NextPage1 = () => {
+    navigate("/home");
+  }
 
   return (
     <>
-     <div className="form-container" style={{ width: '100%', height: '800px', position: 'relative', backgroundColor: "black" }}>
+      <div className="form-container" style={{ width: '100%', height: '800px', position: 'relative', backgroundColor: "black" }}>
 
-<Galaxy 
-    mouseRepulsion
-    mouseInteraction
-    density={1}
-    glowIntensity={0.3}
-    saturation={0}
-    hueShift={140}
-    twinkleIntensity={0.3}
-    rotationSpeed={0.1}
-    repulsionStrength={2}
-    autoCenterRepulsion={0}
-    starSpeed={0.5}
-    speed={1}
-/>
-    <ElectricBorder
-        color="#f80a0aff"
-        speed={1}
-        chaos={0.5}
-        thickness={2}
-        style={{ borderRadius: 16 }}>
-      <div>
-        <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
-      
-          <button className="text-amber-200 ml-10"  onClick={NextPage1}>Go Back</button>
+        <Galaxy
+          mouseRepulsion
+          mouseInteraction
+          density={1}
+          glowIntensity={0.3}
+          saturation={0}
+          hueShift={140}
+          twinkleIntensity={0.3}
+          rotationSpeed={0.1}
+          repulsionStrength={2}
+          autoCenterRepulsion={0}
+          starSpeed={0.5}
+          speed={1}
+        />
+        <ElectricBorder
+          color="#f80a0aff"
+          speed={1}
+          chaos={0.5}
+          thickness={2}
+          style={{ borderRadius: 16 }}>
+          <div>
+            <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
 
-        <form className="modern-form" onSubmit={submitform}>
+              <button className="text-amber-200 ml-10" onClick={NextPage1}>Go Back</button>
 
-          <h1 className="font-bold text-white font-serif flex text-2xl ml-28">Sign up Form</h1>
+              <form className="modern-form" onSubmit={submitform}>
 
-          <label>Enter Name</label>
-          <input type="text" name="name" value={form.name} onChange={handlchange} />
+                <h1 className="font-bold text-white font-serif flex text-2xl ml-28">Sign up Form</h1>
 
-          <label>Enter Email</label>
-          <input type="text" name="email" value={form.email} onChange={handlchange} />
+                <label>Enter Name</label>
+                <input type="text" name="name" value={form.name} onChange={handlchange} />
 
-          <label>Enter Password</label>
-          <input type="password" name="pass" value={form.pass} onChange={handlchange} />
+                <label>Enter Email</label>
+                <input type="text" name="email" value={form.email} onChange={handlchange} />
 
-          <label>Enter Confirm Password</label>
-          <input type="password" name="cpass" value={form.cpass} onChange={handlchange} />
+                <label>Enter Password</label>
+                <input type="password" name="pass" value={form.pass} onChange={handlchange} />
 
-          <button type="submit" className="bg-amber-500 hover:bg-amber-600 text-white">Submit</button>
-          <h2>Already have an account <h2 onClick={NextPage} className="cursor-pointer text-black">Log In</h2></h2>
-          
-        </form>
-    </p>
-  </div>
-</ElectricBorder>
-<Galaxy 
-    mouseRepulsion
-    mouseInteraction
-    density={1}
-    glowIntensity={0.3}
-    saturation={0}
-    hueShift={140}
-    twinkleIntensity={0.3}
-    rotationSpeed={0.1}
-    repulsionStrength={2}
-    autoCenterRepulsion={0}
-    starSpeed={0.5}
-    speed={1}
-/>
+                <label>Enter Confirm Password</label>
+                <input type="password" name="cpass" value={form.cpass} onChange={handlchange} />
+
+                <button type="submit" className="bg-amber-500 hover:bg-amber-600 text-white">Submit</button>
+                <h2>Already have an account <h2 onClick={NextPage} className="cursor-pointer text-black">Log In</h2></h2>
+
+              </form>
+            </p>
+          </div>
+        </ElectricBorder>
+        <Galaxy
+          mouseRepulsion
+          mouseInteraction
+          density={1}
+          glowIntensity={0.3}
+          saturation={0}
+          hueShift={140}
+          twinkleIntensity={0.3}
+          rotationSpeed={0.1}
+          repulsionStrength={2}
+          autoCenterRepulsion={0}
+          starSpeed={0.5}
+          speed={1}
+        />
       </div>
     </>
   );

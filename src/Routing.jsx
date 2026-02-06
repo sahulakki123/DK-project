@@ -20,28 +20,28 @@ import Bookingform from './Bookingform'
 const Routing = () => {
   return (
     <>
-    <Routes>
-        <Route path='/' element={<Layout/>}>
-        <Route index element={<Home/>}/>
-        <Route path='home' element={<Home/>}/>
-        <Route path='products' element={<Products/>}/>
-        <Route path='contact' element={<Contact/>}/>
-        <Route path='offers' element={<Offers/>}/>
-        <Route path='profile' element={<Profile/>}/>
-        <Route path='order' element={<Order/>}/>
-        <Route path='creatines' element={<Creatines1/>}/>
-        <Route path='Pre_Workout'element={<Pre_Workout1/>} /> 
-        <Route path='Peanut'element={<Peanut1/>} /> 
-        <Route path='Multivitamins'element={<Multivitamins1/>} /> 
-        <Route path='Mass_Gainer'element={<MassGainer1/>} /> 
-        <Route path='myData'element={<Datashow/>} />
-        <Route path='bookingform'element={<Bookingform/>} />
-        <Route path="*" element={<h1>Error</h1>}/>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='home' element={<Home />} />
+          <Route path='products' element={<Products />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='offers' element={<Offers />} />
+          <Route path='profile' element={<Profile />} />
+          <Route path='order' element={<Order />} />
+          <Route path='creatines' element={<Creatines1 />} />
+          <Route path='Pre_Workout' element={<Pre_Workout1 />} />
+          <Route path='Peanut' element={<Peanut1 />} />
+          <Route path='Multivitamins' element={<Multivitamins1 />} />
+          <Route path='Mass_Gainer' element={<MassGainer1 />} />
+          <Route path='myData' element={<Datashow />} />
+          <Route path='bookingform' element={<Bookingform />} />
+          <Route path="*" element={<h1>Error</h1>} />
 
         </Route>
-        <Route path='login' element={<Login/>}/>
-        <Route path='signup' element={<Signup/>}/>
-    </Routes>
+        <Route path='login' element={<Login />} />
+        <Route path='signup' element={<Signup />} />
+      </Routes>
     </>
   )
 }

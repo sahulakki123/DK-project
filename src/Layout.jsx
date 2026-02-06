@@ -19,7 +19,7 @@ const Layout = () => {
       <header className="w-full bg-amber-200 shadow-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
 
-          <img src={logo} alt="logo" className="h-14 rounded-xl cursor-pointer" onClick={() => navigate("/home")}  />
+          <img src={logo} alt="logo" className="h-14 rounded-xl cursor-pointer" onClick={() => navigate("/home")} />
 
           <nav className="hidden md:flex">
             <ul className="flex items-center gap-8 font-serif text-lg font-semibold">
@@ -55,14 +55,14 @@ const Layout = () => {
               </>
             ) : (
 
-                <div>
-                   <Link to="/profile" className="hover:text-gray-500 transition mr-10">Profile</Link>
-                       
-                        
-                    
-              <button onClick={handleLogout} className="px-4 py-1 rounded-lg bg-red-600 text-white hover:bg-red-500 transition">Log Out</button>
-            </div>
-              
+              <div>
+                <Link to="/profile" className="hover:text-gray-500 transition mr-10">Profile</Link>
+
+
+
+                <button onClick={handleLogout} className="px-4 py-1 rounded-lg bg-red-600 text-white hover:bg-red-500 transition">Log Out</button>
+              </div>
+
             )}
 
           </div>

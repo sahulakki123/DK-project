@@ -9,11 +9,11 @@ import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
 
-    
-         const navigate=useNavigate()
-  
-            const NextPage = () => {
-      navigate("/Signup");
+
+    const navigate = useNavigate()
+
+    const NextPage = () => {
+        navigate("/Signup");
 
     };
     return (
